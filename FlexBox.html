@@ -9,6 +9,28 @@
             body{
                 padding: 2cm;
             }
+            .image{
+                margin: 10px;
+                border: 3px solid #000;
+                box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+                max-width: 23vw;
+            }
+            .imageArticle{
+                margin: 10px;
+                border: 3px solid #000;
+                box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+                max-width: 10vw;
+                margin-right: 1em;
+            }
+            .article1{
+                display: flex;
+                align-items: flex-start;
+                background: #F6F3EB;
+                padding: 1em;
+                border-radius: 3px;
+                max-width: 28em;
+                
+            }
             .headerContainer{
                 display: flex;
                 flex-flow: column wrap;
@@ -40,10 +62,17 @@
             .sideBarItem{
                 flex:1 0 0 ;
                 border: 0px solid gray;
+                
             }
             .sideBarLeftItem{
                 background: cyan;
                 order: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                flex-direction: row;
+                max-height: fit-content;
+    
             }
             .mainContentItem{
                 flex: 3 0px;
@@ -53,7 +82,12 @@
             }
             .sideBarRightItem{
                 background: cyan;
-                order: 3; 
+                order: 3;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                flex-direction: row;
+                max-height: fit-content; 
             }
         </style>
     </head>
@@ -63,28 +97,35 @@
         </header>
         <div class="mainContainer">
             <section class="mainContentItem">
-                <article>
+                <article >
                     <h2>First Article</h2>
-                    <p>The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, 
+                    
+                    <p class="article1"><img class="imageArticle" src="C:\Users\ayuanshi\Pictures\picture.jpg">The Flexible Box Module, usually referred to as flexbox, was designed as a one-dimensional layout model, 
                         and as a method that could offer space distribution between items in an interface and powerful alignment 
                         capabilities. This article gives an outline of the main features of flexbox, which 
                         we will be exploring in more detail in the rest of these guides.</p>
                 </article>
                 <article>
                     <h2>Second Article</h2>
-                    <p>When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with 
+                    <p class="article1"><img class="imageArticle" src="C:\Users\ayuanshi\Pictures\picture.jpg">When we describe flexbox as being one dimensional we are describing the fact that flexbox deals with 
                         layout in one dimension at a time — either as a row or as a column. This can be contrasted with 
                         the two-dimensional model of CSS Grid Layout, which controls columns and rows together.</p>
                 </article>
                 <article>
                     <h2>Third Article</h2>
-                    <p>When working with flexbox you need to think in terms of two axes — the main axis and the cross axis.
+                    <p class="article1"><img class="imageArticle" src="C:\Users\ayuanshi\Pictures\picture.jpg">When working with flexbox you need to think in terms of two axes — the main axis and the cross axis.
                         The main axis is defined by the flex-direction property, and the cross axis runs perpendicular to it.
                         Everything we do with flexbox refers back to these axes, so it is worth understanding how they work from the outset.</p>
                 </article>
             </section>
-            <sidebar class="sideBarItem sideBarLeftItem">Left Side Bar</sidebar>
-            <sidebar class="sideBarItem sideBarRightItem">Right Side Bar</sidebar>
+            <sidebar class="sideBarItem sideBarLeftItem">Left Side Bar
+                <img class="image" src="C:\Users\ayuanshi\Pictures\staff.jpg">
+                <img class="image" src="C:\Users\ayuanshi\Pictures\pk1_edited.jpg">
+            </sidebar>
+            <sidebar class="sideBarItem sideBarRightItem">Right Side Bar
+                <img class="image" src="C:\Users\ayuanshi\Pictures\staff.jpg">
+                <img class="image" src="C:\Users\ayuanshi\Pictures\pk1_edited.jpg">
+            </sidebar>
         </div>
         <footer class="footerContainer">Footer</footer>
     </body>
