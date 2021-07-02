@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Input Forms</title>
+        <style>
+            body{
+                margin: 10px;
+            }
+        
+            .mainContent{
+                display: flex;
+                flex-flow: column wrap;
+                font-weight:bold ;
+                padding: 30px;
+                line-height: 40px;
+                width: 50%;
+                margin-left: 20%;
+                background-image:url("paperPen.jpeg") ;
+                background-size: cover;
+                
+                
+            }
+            label{
+                font-size: 25px;
+            }
+            input {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                box-sizing: border-box;
+                }
+            input[type=submit]:hover {
+                background-color: #45a049;
+            }
+            input[type=submit] {
+                width: 50%;
+                background-color: #4CAF50;
+                color: white;
+                padding: 14px 20px;
+                margin: 8px 0;
+                border: none;
+                border-radius: 4px;
+                cursor: pointer;
+                margin-left: 25%;
+                }
+            .headContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: rgb(17, 21, 32);
+                font-weight: bold;
+                padding: 10px;
+                font-size: 50px;
+                width: 53%;
+                margin-left: 20%;
+                color: white;
+            
+            }
+            .footerContainer{
+                display: flex;
+                flex-flow: column wrap;
+                align-content: center;
+                background: coral;
+                font-weight: bold;
+                padding: 10px;
+                width: 53%;
+                margin-left: 20%;
+            }
+
+        </style>
+    </head>
+   
+    <body>
+        <div class="mainContainer">
+            <header class="headContainer">Examination Form</header>
+            <div class="mainContent">
+                <form name="myForm" method="POST" >
+                    <label for="text">Enter Your Name</label>
+                    <input type="text" id="text" name="text" placeholder="Your name here" required pattern="[A-Z]{1}[a-z]{3,}"></br>
+                    <label for="text">Enter Email</label>
+                    <input type="email" id="email" name="email" placeholder="Your email here" required pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"></br>
+                    <label for="phoneNumber">Enter Phone Number</label>
+                    <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Your Phone Number here" required pattern="[0-9\s]{3}[7||8||9]{1}[0-9]{9}"></br>
+                    <label for="password">Enter Password</label>
+                    <input type="password" id="password" name="password" placeholder="Your password here" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$"></br>
+                    <input type="submit">
+                </form>
+            </div>
+            <footer class="footerContainer">copyright@abc</footer>
+        </div>
+    </body>
+</html>
